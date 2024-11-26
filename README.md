@@ -1,8 +1,8 @@
-# sec_transc
+# EJBCA PKI
 
-11/9 ejbca root e sub
+COnstuindo uma infraestrutura de chaves públicas utilizando o ejbca para criação de autoridades certificados e emissão de certificados digitais.
 
-# EJBCA
+## instalando o EJBCA
 
 * instala o docker e deixa aberto
 *  pull keyfactor/ejbca-ce
