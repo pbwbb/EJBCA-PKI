@@ -11,6 +11,7 @@ COnstuindo uma infraestrutura de chaves públicas utilizando o ejbca para criaç
   ![image](https://github.com/user-attachments/assets/2ac16c62-36a2-4702-93c1-4534e43d6eed)
   cancela
 
+# CA Root
   ## Crypto token
 
 * Criar um token novo
@@ -67,6 +68,8 @@ https://localhost/ejbca/ra/cas.xhtml
 ![image](https://github.com/user-attachments/assets/0f064a70-2164-44ad-9f9a-c66fc6ffee7e)
 * Ou abrir o certificado e clicar em instalar
 
+# CA Subordinada
+
 ## Perfil de certificado da CA subordinada
 
 * Clonar o perfil
@@ -95,7 +98,103 @@ https://localhost/ejbca/ra/cas.xhtml
 ![image](https://github.com/user-attachments/assets/cf18c406-c7d6-4135-9a56-a78a4728a2d6)
 ![image](https://github.com/user-attachments/assets/5bc36ab8-01a2-451f-a6bc-9dfe2e2a7bd9)
 
+## Perfil para Assinatura de e-mail
 
+eu vou me matar
 
+# Assinatura de Código
+
+* Para a assinatura de código sera usado o windows SDK
+* baixa a porra do SDK
+
+## Perfil code-signing
+
+* clonar o enduser
+
+![image](https://github.com/user-attachments/assets/156c0b02-d913-4ea3-a139-ef0a0673de79)
+
+![image](https://github.com/user-attachments/assets/baf3e692-dd24-41d7-8e6f-03f193afcdf6)
+
+* Code Sgining
+
+![image](https://github.com/user-attachments/assets/819abaef-cca7-43f4-ad14-390d16c185fa)
+
+![image](https://github.com/user-attachments/assets/08773be2-522e-4a8f-9cd0-84d5cfc0111d)
+
+## Perfil de entidade final
+
+![image](https://github.com/user-attachments/assets/74d2e18b-8867-4af0-8f43-61cdbeb88f43)
+
+![image](https://github.com/user-attachments/assets/7d6712b6-582e-4944-afc0-ee2eb3e4a40b)
+
+![image](https://github.com/user-attachments/assets/008e1569-0724-4092-86d2-d58b511714c2)
+
+![image](https://github.com/user-attachments/assets/44461df6-22b0-46cb-b5bf-e5af6d5e45eb)
+
+## Solicitando o certificado
+
+![image](https://github.com/user-attachments/assets/f16cb990-dc9c-4141-a3a7-0ac0b163b961)
+
+![image](https://github.com/user-attachments/assets/24a55b28-92b0-46c1-a21b-5edc4ea4ea6f)
+
+![image](https://github.com/user-attachments/assets/6f80718f-2569-4c4d-ac63-a5323b48cbbb)
+
+(o código é uma senha qualquer fds)
+
+* baixa o PKCS12
+
+![image](https://github.com/user-attachments/assets/6fb1ae59-8b23-4ee2-9ff5-6a85e4a2f25f)
+
+* importar o Certificado
+
+![image](https://github.com/user-attachments/assets/33c002e1-892b-444e-b757-3bec440ea6a0)
+
+* senha que botou antes
+
+![image](https://github.com/user-attachments/assets/d46cd659-1bb2-4dfd-bf88-ee3b3e4c2a92)
+
+(se não bota aqui)
+![image](https://github.com/user-attachments/assets/97e33562-f060-4a0a-8c84-42b2870cc5fb)
+
+![image](https://github.com/user-attachments/assets/36cbaff6-40fa-400d-aba0-f0a6e6b9930d)
+
+## Usando o Sgintool
+
+* Fazer instalação do windows SDK -> https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
+* Adicionar Variavel no PATH
+** Editar variaveis do sistema
+
+![image](https://github.com/user-attachments/assets/42651439-3c5a-4f99-bd19-d15cea5c99fb)
+
+![image](https://github.com/user-attachments/assets/189f09f2-01c8-4e56-862a-8f7f4f93dffe)
+
+(C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86)
+
+* cd C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86
+* signtool sign /? -> menu help
+* Nesse caso vou assinar uma cópia do notepad
+* signtool sign /a <caminho>
+
+![image](https://github.com/user-attachments/assets/77ba4283-ad03-4bb0-9827-ea6260b507a7)
+
+* Nesse caso é preciso inserir um algoritmo de hash (digest), vou usar SHA256
+* signtool sign /a /fd SHA256 <caminho>
+
+![image](https://github.com/user-attachments/assets/5d22f8b3-c37c-4f89-9a62-aa1d63497686)
+
+![image](https://github.com/user-attachments/assets/f34b937a-2476-4048-95b6-ba68774c72e2)
+
+![image](https://github.com/user-attachments/assets/f80d7514-94a9-44ea-a17a-fbafd4c6ae9f)
+
+## Incluindo timestamp com a freetsa
+
+* Vou assinar o notepad novamente incluindo a timestamp
+URL -> http://freetsa.org/tsr
+* signtool sign /a /fd SHA256 /tr http://freetsa.org/tsr /td SHA256 C:\Tmp\notepad.exe
+![image](https://github.com/user-attachments/assets/35ac1a0e-69e1-4aa8-bc99-a2858fa6ff3d)
+
+* depois de instalar o certificado da freetsa conseguimos verificar a timestamp
+
+![image](https://github.com/user-attachments/assets/855e25f8-f069-460b-a221-c2b34c8460ef)
 
 
