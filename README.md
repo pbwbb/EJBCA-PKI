@@ -197,4 +197,99 @@ URL -> http://freetsa.org/tsr
 
 ![image](https://github.com/user-attachments/assets/855e25f8-f069-460b-a221-c2b34c8460ef)
 
+# Certificado para servidor web TLS
+
+## perfil do server
+
+* clonar o perfil server
+
+   ![image](https://github.com/user-attachments/assets/12e9c4ec-c00a-47b2-b9ab-a84a892b2385)
+
+![image](https://github.com/user-attachments/assets/b45a0d38-3a87-40b2-a203-fafa6c9aac8d)
+
+![image](https://github.com/user-attachments/assets/f8bfd9d2-e75c-4b85-9705-a478c340c8a5)
+
+![image](https://github.com/user-attachments/assets/3bc2a15f-31f0-4904-9cd8-19dd8dbe7c92)
+
+## Perfil de entidade final
+
+![image](https://github.com/user-attachments/assets/f68e1f5d-35ac-4249-8353-e1f55c24ddf3)
+
+![image](https://github.com/user-attachments/assets/a84556ed-9e02-4d4d-9018-76ff9ed89172)
+
+* O par de chaves é gerado pela propria entidade final
+
+![image](https://github.com/user-attachments/assets/08c3bb46-1ddd-4656-8f9d-d8c64c36d1be)
+
+
+![image](https://github.com/user-attachments/assets/a6845aee-6e92-4cb1-b5cc-84cc6da83f02)
+
+# Windows IIS
+
+fudeu eu nao consegui uma vm
+
+* vai no internet information services manager
+* Server certificates
+  
+ ![image](https://github.com/user-attachments/assets/0a8e753f-3f9b-4ead-b347-3a063d81635e)
+
+* create certificate request
+
+![image](https://github.com/user-attachments/assets/daaf4e07-f339-4490-9d33-9843c6844cc9)
+
+![image](https://github.com/user-attachments/assets/45ba04e7-3cdb-4517-b011-71a8cca833a3)
+
+![image](https://github.com/user-attachments/assets/bc5aeb4f-f987-4b55-8431-3c035ccfd3ca)
+
+(salva em qualquer lugar)
+
+![image](https://github.com/user-attachments/assets/072ee23b-b3ea-42a8-ae15-5ea54bd0805c)
+
+
+https://www.filepastebin.com/ (passsa o cert pra maquina do ejbca)
+
+* Solictar certificado
+
+![image](https://github.com/user-attachments/assets/8231cf6e-2c06-4ed3-9909-824de2c379c0)
+
+* colar o request
+
+![image](https://github.com/user-attachments/assets/12841e17-86d2-475d-bb2e-37352c404a7b)
+
+* baixar como pkcs7 depois manda ele pro server
+
+* complete certificate request
+
+![image](https://github.com/user-attachments/assets/0924a35f-0d27-44c6-895e-bade4d29ea27)
+
+![image](https://github.com/user-attachments/assets/28615493-3b4f-4242-8338-46e2ff99d809)
+
+![image](https://github.com/user-attachments/assets/59e8174f-4680-4ee2-bd27-b95e06b345fd)
+
+![image](https://github.com/user-attachments/assets/34cc0492-3bf4-473b-85f3-016ba6b2b4f9)
+
+
+* instala o cert
+* aparentemente funciona
+
+![image](https://github.com/user-attachments/assets/0d9ff259-0b24-444a-bd93-867d9f8913b6)
+
+* mudar o hosts para acessar o site (C:\Windows\System32\Drivers\etc\hosts)
+ IP dominio_do_server
+
+
+
+## wireshark  
+* tls.handshake
+* client hello
+
+![image](https://github.com/user-attachments/assets/d201e36d-66f7-4007-8d2a-634bb9757486)
+
+![image](https://github.com/user-attachments/assets/27fe8b5b-1596-415a-b370-1cdb4ae440fd)
+(ip.addr ip do server, olha pelo session id )
+
+certutil -url url_da_crl
+
+
+
 
