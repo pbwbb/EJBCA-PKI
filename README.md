@@ -1,10 +1,12 @@
+em construção...
+
 # EJBCA PKI
 
-COnstuindo uma infraestrutura de chaves públicas utilizando o ejbca para criação de autoridades certificados e emissão de certificados digitais.
+Constuindo uma infraestrutura de chaves públicas utilizando o ejbca para criação de autoridades certificados e emissão de certificados digitais.
 
 ## instalando o EJBCA
 
-* instala o docker e deixa aberto
+* instalando o docker 
 *  pull keyfactor/ejbca-ce
 *  docker run -it --rm -p 80:8080 -p 443:8443 -h localhost -e TLS_SETUP_ENABLED="simple" keyfactor/ejbca-ce
 * https://localhost:443/ejbca/adminweb/ -> tem que botar o https
@@ -16,10 +18,10 @@ COnstuindo uma infraestrutura de chaves públicas utilizando o ejbca para criaç
 
 * Criar um token novo
   ![image](https://github.com/user-attachments/assets/9d67214b-c335-46bc-8bb5-39bb120d54fe)
-* o Código é tipo uma senha
-* Escolhe o algoritmo:
+* o Código funciona como uma senha
+* Escolhendo o algoritmo:
  ![image](https://github.com/user-attachments/assets/d33a8108-334f-4cba-9d15-166fecfc6431)
-* gera o par de chaves
+* gerando o par de chaves
   ![image](https://github.com/user-attachments/assets/2980136e-0c49-457d-82c1-172e8569aa92)
 
 ## Perfil de certificado Root
@@ -27,7 +29,7 @@ COnstuindo uma infraestrutura de chaves públicas utilizando o ejbca para criaç
 ![image](https://github.com/user-attachments/assets/ab6ce612-9831-41fd-bd58-a3c4a3365e07)
 * clonar o profile pra conseguir editar
 ![image](https://github.com/user-attachments/assets/941dbde8-c31b-42e5-b99a-86dd752133fe)
-(20y é a validade)
+(vou usar 20 anos como validade)
 
 ![image](https://github.com/user-attachments/assets/a41080d0-589a-498a-8e86-5bf2e8010fe6)
 
@@ -48,7 +50,7 @@ COnstuindo uma infraestrutura de chaves públicas utilizando o ejbca para criaç
 ![image](https://github.com/user-attachments/assets/c66cf240-209b-4e2f-ba68-83d8da55609f)
 
 ![image](https://github.com/user-attachments/assets/24474c34-76c9-4825-a9f0-8c6858894b60)
-(a root é sefl signed, escolher o perfil cirado)
+(a root é self signed, escolher o perfil criado)
 
 * o resto dos campos não foi mexido
 
@@ -100,12 +102,12 @@ https://localhost/ejbca/ra/cas.xhtml
 
 ## Perfil para Assinatura de e-mail
 
-eu vou me matar
+* x
 
+  
 # Assinatura de Código
 
 * Para a assinatura de código sera usado o windows SDK
-* baixa a porra do SDK
 
 ## Perfil code-signing
 
@@ -115,7 +117,7 @@ eu vou me matar
 
 ![image](https://github.com/user-attachments/assets/baf3e692-dd24-41d7-8e6f-03f193afcdf6)
 
-* Code Sgining
+* Code Signing
 
 ![image](https://github.com/user-attachments/assets/819abaef-cca7-43f4-ad14-390d16c185fa)
 
@@ -139,13 +141,13 @@ eu vou me matar
 
 ![image](https://github.com/user-attachments/assets/6f80718f-2569-4c4d-ac63-a5323b48cbbb)
 
-(o código é uma senha qualquer fds)
+(o código é uma senha qualquer)
 
-* baixa o PKCS12
+* baixando o PKCS12
 
 ![image](https://github.com/user-attachments/assets/6fb1ae59-8b23-4ee2-9ff5-6a85e4a2f25f)
 
-* importar o Certificado
+* importando o Certificado
 
 ![image](https://github.com/user-attachments/assets/33c002e1-892b-444e-b757-3bec440ea6a0)
 
@@ -241,8 +243,6 @@ fudeu eu nao consegui uma vm
 
 ![image](https://github.com/user-attachments/assets/bc5aeb4f-f987-4b55-8431-3c035ccfd3ca)
 
-(salva em qualquer lugar)
-
 ![image](https://github.com/user-attachments/assets/072ee23b-b3ea-42a8-ae15-5ea54bd0805c)
 
 
@@ -270,7 +270,6 @@ https://www.filepastebin.com/ (passsa o cert pra maquina do ejbca)
 
 
 * instala o cert
-* aparentemente funciona
 
 ![image](https://github.com/user-attachments/assets/0d9ff259-0b24-444a-bd93-867d9f8913b6)
 
