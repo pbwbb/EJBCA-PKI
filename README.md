@@ -228,9 +228,7 @@ URL -> http://freetsa.org/tsr
 
 # Windows IIS
 
-fudeu eu nao consegui uma vm
-
-* vai no internet information services manager
+* internet information services manager
 * Server certificates
   
  ![image](https://github.com/user-attachments/assets/0a8e753f-3f9b-4ead-b347-3a063d81635e)
