@@ -289,4 +289,22 @@ certutil -url url_da_crl
 
 
 
+11/9 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2811%5F9%29%2D20240911%5F193819%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E60a53abe%2D8458%2D4c14%2Daedf%2Db3c7a37a7ecf
+
+25/09 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2825%5F9%29%2D20240925%5F193911%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Eab402aba%2D51b8%2D4145%2D9494%2D134aec84bab7
+
+16/10 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2816%5F10%29%2D20241016%5F193944%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ec4f3274e%2D7e7a%2D4cb5%2Db798%2Dba1b46836c28
+
+16/10 p2 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2816%5F10%29%2D20241016%5F210250%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E0527e1d1%2D9685%2D4da1%2Db45b%2D7df0b3e0368b
+
+23/10 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2823%5F10%29%2D20241023%5F193751%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E6d6538e8%2D8f9f%2D4fcf%2Dac66%2Dc3a698d3b2f8
+
+30/10 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20presencial%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20em%20SL%20%2830%5F10%29%2D20241030%5F193919%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E109db90d%2Df8a9%2D40cd%2Db895%2D79745a41d4e1
+
+
+06/11 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%286%5F11%29%2D20241106%5F210800%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ede5fa15e%2Dcb8c%2D4952%2D8277%2Df28e201b0eaf
+
+13/11 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20presencial%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2D%20campus%20POA%20%2813%5F11%29%2D20241113%5F193529%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Efea7e0ea%2D4c02%2D4703%2D9094%2Db9ba8a4a860b
+
+correcao GB -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%284%5F12%29%2D20241204%5F193913%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E28081eb3%2D09eb%2D4031%2Dab14%2D8b865821bc72
 
