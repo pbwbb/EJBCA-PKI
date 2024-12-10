@@ -317,3 +317,6 @@ certutil -url url_da_crl
 
 correcao GB -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%284%5F12%29%2D20241204%5F193913%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E28081eb3%2D09eb%2D4031%2Dab14%2D8b865821bc72
 
+OID CPS -> 1.3.6.1.5.5.7.2.1
+
+vm -> 74.179.81.143:3389
