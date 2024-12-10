@@ -274,6 +274,15 @@ https://www.filepastebin.com/ (passsa o cert pra maquina do ejbca)
 * mudar o hosts para acessar o site (C:\Windows\System32\Drivers\etc\hosts)
  IP dominio_do_server
 
+## revogar certificado tls
+
+* search end entity
+
+![image](https://github.com/user-attachments/assets/ef7e5882-8780-44d4-b0ef-26ff347b6f75)
+* revoke selected
+* criar crl
+
+![image](https://github.com/user-attachments/assets/a1984ac8-4a8d-4c44-933b-67a6d9ef122a)
 
 
 ## wireshark  
