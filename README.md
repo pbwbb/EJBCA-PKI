@@ -320,3 +320,82 @@ correcao GB -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15
 OID CPS -> 1.3.6.1.5.5.7.2.1
 
 vm -> 74.179.81.143:3389
+
+
+CA root
+
+- crypto token
+- certificate profile
+- criar ca
+- exemplo gb
+    - DN: CN= {Sobrenome} – GB - Root CA,
+    O=Unisinos, C=BR.
+    - Validade de 20 anos;
+    - RSA 4096 bits.
+
+Code sign 
+
+- crypto token
+- sub certificate profile
+- criar SUBca
+- end entity CERTIFICATE profile
+- end entity profile
+- solicitar certificado no ra web
+- instala o querido
+- signtool sign /a /fd SHA256 /tr http://freetsa.org/tsr /td SHA256 C:\Tmp\notepad.exe
+
+Email
+
+- Crypto token
+- sub Certificate profile
+- Criar SubCA
+- end entity CERTIFICATE profile
+- end entity profile
+- solicitar certificado no ra web
+    - enviar o pkcs#12 a vm do thunderbird (envia junto o da sub)
+    - adicionar os cert no thunderbird
+        - PKCS12 → your certificates
+        - SubCA → edit trust → mail users
+- Quando for enviar o email clica no S/MIME e escolhe se que criptografar ou assinar
+
+Tls
+
+- crypto token
+- sub Certificate profile
+- criar SUBca
+- end entity CERTIFICATE profile (clona o SERVER)
+    - ext → server authentication
+- end entity profile
+    - user generated
+        
+        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/55047e25-ea80-424c-911c-ced2625e1d6d/3e9d7e5d-300e-4ab5-a5a2-6ef8f61b8870/image.png)
+        
+- Criar CSR no web server
+- Solicitar certificado no RA web
+    - Provided by user e colar a csr
+    - baixa o pksc#7 e manda ele pro server
+- Complete certification request
+    - escolhe o p7b
+    - web hosting
+    - bindings
+- se precisar editar o hosts
+    - abre o notepad como admin
+    - C:\\Windows\\System32\\Drivers\\etc\\hosts
+
+Revogar cert
+
+- Search end entities
+    - acha o cert
+- revocation reason
+    - se nao tiver bota key compromise fds
+    - revoke selected
+- CA structure & CRls
+    - create CRL na sub ca mesmo
+- baixa a CRL da sub CA no RA web
+
+- urls no profile
+- DN vai na hora de criar a CA
+- extended key use no profile do end entity
+- quando for baixar o certificados da CAs baixa o pem sem o chain
+
+  
