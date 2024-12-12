@@ -1,12 +1,6 @@
 em construção...
 
 
-
-
-https://github.com/user-attachments/assets/ad78e211-3d7d-4c29-8234-6aaa6c232dfa
-
-
-
 # EJBCA PKI
 
 Constuindo uma infraestrutura de chaves públicas utilizando o ejbca para criação de autoridades certificados e emissão de certificados digitais.
