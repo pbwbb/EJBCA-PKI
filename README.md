@@ -12,6 +12,7 @@ Nesse repositório vou registar um laboratório para a construção de uma Infra
 
 * ACs Subordinadas
   *  Criação e configuração de ACs subordinadas para emissão de certificados.
+  *  Inclusão de URIs ficticias para CPS, CRL, OCSP e Certificado do emissor
 
 * Certificado para Assinatura de Código com Timestamp
   * Emissão de certificados digitais para a assinatura de código
