@@ -3,7 +3,34 @@ em construção...
 
 # EJBCA PKI
 
-Constuindo uma infraestrutura de chaves públicas utilizando o ejbca para criação de autoridades certificados e emissão de certificados digitais.
+Nesse repositório vou registar um laboratório para a construção de uma Infraestrutura de Chaves Públicas (PKI) utilizando o EJBCA. O objetivo é explorar o uso de certificados digitais em diferentes contextos, configurando uma estrutura de Autoridades Certificadoras (ACs) e casos de uso práticos.
+
+## O que será configurado neste lab?
+
+* AC Raiz (Root CA)
+  * Configuração de uma Autoridade Certificadora raiz para gerenciar toda a hierarquia de confiança.
+
+* ACs Subordinadas
+  *  Criação e configuração de ACs subordinadas para emissão de certificados.
+
+* Certificado para Assinatura de Código com Timestamp
+  * Emissão de certificados digitais para a assinatura de código
+  * Inclusão de timestamp usando o freetsa
+  * Assinatura de um programa com freetsa unsando o windows SDK
+
+* Certificado para Assinatura de E-mail (S/MIME)
+  * Emissão de certificados de e-mail
+  * Envio de um e-mail assinado digitalmente usando um cliente de e-mail(thunderbird)
+
+* Certificado TLS para Servidor Web
+  * Emissão de certificados TLS/SSL para um servidor web, habilitando segura via HTTPS.
+  * Emissão de certificado usando uma CSR (certificate signing request)
+  * Configuração do HTTPS em um servidor web
+  * Análise da comunicação com o servidro usando o Wireshark
+
+* Publicação de CRL (Lista de Certificados Revogados)
+  * Revogação de um certificado emitido
+  * Publicação de uma CRL (Certificate Revocation List)
 
 ## instalando o EJBCA
 
