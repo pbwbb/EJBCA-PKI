@@ -38,7 +38,7 @@ Nesse repositório vou registar um laboratório para a construção de uma Infra
 * Para o propósito desse Lab vou usar a instalação efemera sem autenticação.
   
 ```bash
-docker pull ...
+docker pull keyfactor/ejbca-ce
 ```
 ```bash
  docker run -it --rm -p 80:8080 -p 443:8443 -h localhost -e TLS_SETUP_ENABLED="simple" keyfactor/ejbca-ce
@@ -47,7 +47,7 @@ docker pull ...
   * https://localhost:443/ejbca/adminweb/
 
   ![image](https://github.com/user-attachments/assets/2ac16c62-36a2-4702-93c1-4534e43d6eed)
-  cancela
+  * Nessa instalação não precisa escolher nenhum certificado
 
 # CA Root
   ## Crypto token
