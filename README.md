@@ -1,11 +1,6 @@
-em construção...
-
-
 # EJBCA PKI
 
-Nesse repositório vou registar um laboratório para a construção de uma Infraestrutura de Chaves Públicas (PKI) utilizando o EJBCA. O objetivo é explorar o uso de certificados digitais em diferentes contextos, configurando uma estrutura de Autoridades Certificadoras (ACs) e casos de uso práticos.
-
-## O que será configurado neste lab?
+Construção de uma Infraestrutura de Chaves Públicas (PKI) utilizando o EJBCA. O objetivo é explorar o uso de certificados digitais em diferentes contextos, configurando uma estrutura de Autoridades Certificadoras (ACs) e casos de uso práticos.
 
 * AC Raiz (Root CA)
   * Configuração de uma Autoridade Certificadora raiz para gerenciar toda a hierarquia de confiança.
@@ -27,7 +22,6 @@ Nesse repositório vou registar um laboratório para a construção de uma Infra
   * Emissão de certificados TLS/SSL para um servidor web, habilitando segura via HTTPS.
   * Emissão de certificado usando uma CSR (certificate signing request)
   * Configuração do HTTPS em um servidor web
-  * Análise da comunicação com o servidro usando o Wireshark
 
 * Publicação de CRL (Lista de Certificados Revogados)
   * Revogação de um certificado emitido
@@ -57,7 +51,7 @@ docker pull keyfactor/ejbca-ce
 * o Código funciona como uma senha
 * Escolhendo o algoritmo:
  ![image](https://github.com/user-attachments/assets/d33a8108-334f-4cba-9d15-166fecfc6431)
-* gerando o par de chaves
+* Gerando o par de chaves
   ![image](https://github.com/user-attachments/assets/2980136e-0c49-457d-82c1-172e8569aa92)
 
 ## Perfil de certificado Root
@@ -81,14 +75,14 @@ docker pull keyfactor/ejbca-ce
 
 ![image](https://github.com/user-attachments/assets/0bdec1d8-db9d-47cf-aedf-da4d82b69340)
 
-* escolher o crypto token
-* usar mesmo algoritmos do token
+* Escolher o crypto token
+* usar mesmos algoritmos do token
 ![image](https://github.com/user-attachments/assets/c66cf240-209b-4e2f-ba68-83d8da55609f)
 
 ![image](https://github.com/user-attachments/assets/24474c34-76c9-4825-a9f0-8c6858894b60)
-(a root é self signed, escolher o perfil criado)
+(Nesse caso a root é self signed, escolher o perfil criado)
 
-* o resto dos campos não foi mexido
+* o resto dos campos não foram alterados
 
 ## Baixar certificado da Root
 
@@ -102,7 +96,7 @@ https://localhost/ejbca/ra/cas.xhtml
 
 ## instalar certificado
 
-* configurações do edge -> Gerenciar Certificados -> import
+* Configurações do edge -> Gerenciar Certificados -> import
 ![image](https://github.com/user-attachments/assets/0f064a70-2164-44ad-9f9a-c66fc6ffee7e)
 * Ou abrir o certificado e clicar em instalar
 
@@ -122,10 +116,10 @@ https://localhost/ejbca/ra/cas.xhtml
 
 ## Criar CA Subordinada
 
-* escolher crypto token
+* Escolher crypto token
 ![image](https://github.com/user-attachments/assets/4960c4ed-1907-4744-8a4a-0147ae724d84)
 * Escolher o perfil da Sub CA
-* A Sub CA é assinada pela Root
+* A Sub CA vai ser assinada pela Root
 ![image](https://github.com/user-attachments/assets/da03f722-ef3f-4125-824c-1fc069a0e2ff)
 ![image](https://github.com/user-attachments/assets/20118b71-a430-4333-be3a-8ef789579209)
 
@@ -138,7 +132,17 @@ https://localhost/ejbca/ra/cas.xhtml
 
 ## Perfil para Assinatura de e-mail
 
-* x
+- Crypto token
+- sub Certificate profile
+- Criar SubCA
+- end entity CERTIFICATE profile
+- end entity profile
+- solicitar certificado no ra web
+    - enviar o pkcs#12 a vm do thunderbird (envia junto o da sub)
+    - adicionar os cert no thunderbird
+        - PKCS12 → your certificates
+        - SubCA → edit trust → mail users
+- Quando for enviar o email clica no S/MIME e escolhe se que criptografar ou assinar
 
   
 # Assinatura de Código
@@ -177,7 +181,7 @@ https://localhost/ejbca/ra/cas.xhtml
 
 ![image](https://github.com/user-attachments/assets/6f80718f-2569-4c4d-ac63-a5323b48cbbb)
 
-(o código é uma senha qualquer)
+(o código funciona como uma senha)
 
 * baixando o PKCS12
 
@@ -187,11 +191,10 @@ https://localhost/ejbca/ra/cas.xhtml
 
 ![image](https://github.com/user-attachments/assets/33c002e1-892b-444e-b757-3bec440ea6a0)
 
-* senha que botou antes
+* Mesma senha configurada
 
 ![image](https://github.com/user-attachments/assets/d46cd659-1bb2-4dfd-bf88-ee3b3e4c2a92)
 
-(se não bota aqui)
 ![image](https://github.com/user-attachments/assets/97e33562-f060-4a0a-8c84-42b2870cc5fb)
 
 ![image](https://github.com/user-attachments/assets/36cbaff6-40fa-400d-aba0-f0a6e6b9930d)
@@ -210,6 +213,7 @@ https://localhost/ejbca/ra/cas.xhtml
 
 * cd C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86
 * signtool sign /? -> menu help
+  
 * Nesse caso vou assinar uma cópia do notepad
 * signtool sign /a <caminho>
 
@@ -267,7 +271,7 @@ URL -> http://freetsa.org/tsr
 * internet information services manager
 * Server certificates
   
- ![image](https://github.com/user-attachments/assets/0a8e753f-3f9b-4ead-b347-3a063d81635e)
+![{B257332F-68AE-4168-99BD-48D31C514C68}](https://github.com/user-attachments/assets/b66100a9-06f2-463b-9d94-7dd0535fd8f6)
 
 * create certificate request
 
@@ -279,8 +283,6 @@ URL -> http://freetsa.org/tsr
 
 ![image](https://github.com/user-attachments/assets/072ee23b-b3ea-42a8-ae15-5ea54bd0805c)
 
-
-https://www.filepastebin.com/ (passsa o cert pra maquina do ejbca)
 
 * Solictar certificado
 
@@ -303,12 +305,12 @@ https://www.filepastebin.com/ (passsa o cert pra maquina do ejbca)
 ![image](https://github.com/user-attachments/assets/34cc0492-3bf4-473b-85f3-016ba6b2b4f9)
 
 
-* instala o cert
+* instalando o certificado
 
 ![image](https://github.com/user-attachments/assets/0d9ff259-0b24-444a-bd93-867d9f8913b6)
 
-* mudar o hosts para acessar o site (C:\Windows\System32\Drivers\etc\hosts)
- IP dominio_do_server
+* Nesse caso foi mudar o hosts para acessar o site (C:\Windows\System32\Drivers\etc\hosts)
+** IP dominio_do_server
 
 ## revogar certificado tls
 
@@ -330,108 +332,7 @@ https://www.filepastebin.com/ (passsa o cert pra maquina do ejbca)
 ![image](https://github.com/user-attachments/assets/27fe8b5b-1596-415a-b370-1cdb4ae440fd)
 (ip.addr ip do server, olha pelo session id )
 
-certutil -url url_da_crl
 
 
-
-11/9 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2811%5F9%29%2D20240911%5F193819%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E60a53abe%2D8458%2D4c14%2Daedf%2Db3c7a37a7ecf
-
-25/09 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2825%5F9%29%2D20240925%5F193911%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Eab402aba%2D51b8%2D4145%2D9494%2D134aec84bab7
-
-16/10 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2816%5F10%29%2D20241016%5F193944%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ec4f3274e%2D7e7a%2D4cb5%2Db798%2Dba1b46836c28
-
-16/10 p2 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2816%5F10%29%2D20241016%5F210250%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E0527e1d1%2D9685%2D4da1%2Db45b%2D7df0b3e0368b
-
-23/10 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2823%5F10%29%2D20241023%5F193751%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E6d6538e8%2D8f9f%2D4fcf%2Dac66%2Dc3a698d3b2f8
-
-30/10 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20presencial%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20em%20SL%20%2830%5F10%29%2D20241030%5F193919%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E109db90d%2Df8a9%2D40cd%2Db895%2D79745a41d4e1
-
-
-06/11 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%286%5F11%29%2D20241106%5F210800%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ede5fa15e%2Dcb8c%2D4952%2D8277%2Df28e201b0eaf
-
-13/11 -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20presencial%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%2D%20campus%20POA%20%2813%5F11%29%2D20241113%5F193529%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Efea7e0ea%2D4c02%2D4703%2D9094%2Db9ba8a4a860b
-
-correcao GB -> https://asavbrm.sharepoint.com/sites/2024_2943320_1_8/_layouts/15/stream.aspx?id=%2Fsites%2F2024%5F2943320%5F1%5F8%2FDocumentos%20Compartilhados%2FGeneral%2FRecordings%2FExibir%20Apenas%2FAula%20remota%20de%20Seguran%C3%A7a%20em%20Transa%C3%A7%C3%B5es%20Eletr%C3%B4nicas%20%284%5F12%29%2D20241204%5F193913%2DGrava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E28081eb3%2D09eb%2D4031%2Dab14%2D8b865821bc72
-
-OID CPS -> 1.3.6.1.5.5.7.2.1
-
-vm -> 74.179.81.143:3389
-
-
-CA root
-
-- crypto token
-- certificate profile
-- criar ca
-- exemplo gb
-    - DN: CN= {Sobrenome} – GB - Root CA,
-    O=Unisinos, C=BR.
-    - Validade de 20 anos;
-    - RSA 4096 bits.
-
-Code sign 
-
-- crypto token
-- sub certificate profile
-- criar SUBca
-- end entity CERTIFICATE profile
-- end entity profile
-- solicitar certificado no ra web
-- instala o querido
-- signtool sign /a /fd SHA256 /tr http://freetsa.org/tsr /td SHA256 C:\Tmp\notepad.exe
-
-Email
-
-- Crypto token
-- sub Certificate profile
-- Criar SubCA
-- end entity CERTIFICATE profile
-- end entity profile
-- solicitar certificado no ra web
-    - enviar o pkcs#12 a vm do thunderbird (envia junto o da sub)
-    - adicionar os cert no thunderbird
-        - PKCS12 → your certificates
-        - SubCA → edit trust → mail users
-- Quando for enviar o email clica no S/MIME e escolhe se que criptografar ou assinar
-
-Tls
-
-- crypto token
-- sub Certificate profile
-- criar SUBca
-- end entity CERTIFICATE profile (clona o SERVER)
-    - ext → server authentication
-- end entity profile
-    - user generated
-        
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/55047e25-ea80-424c-911c-ced2625e1d6d/3e9d7e5d-300e-4ab5-a5a2-6ef8f61b8870/image.png)
-        
-- Criar CSR no web server
-- Solicitar certificado no RA web
-    - Provided by user e colar a csr
-    - baixa o pksc#7 e manda ele pro server
-- Complete certification request
-    - escolhe o p7b
-    - web hosting
-    - bindings
-- se precisar editar o hosts
-    - abre o notepad como admin
-    - C:\\Windows\\System32\\Drivers\\etc\\hosts
-
-Revogar cert
-
-- Search end entities
-    - acha o cert
-- revocation reason
-    - se nao tiver bota key compromise fds
-    - revoke selected
-- CA structure & CRls
-    - create CRL na sub ca mesmo
-- baixa a CRL da sub CA no RA web
-
-- urls no profile
-- DN vai na hora de criar a CA
-- extended key use no profile do end entity
-- quando for baixar o certificados da CAs baixa o pem sem o chain
 
   
